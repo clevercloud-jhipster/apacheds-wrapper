@@ -1,0 +1,19 @@
+{
+    "build": {
+        "type":"maven",
+        "goal":"package"
+    },
+    "deploy": {
+        "container":"TOMCAT8",
+		  "war" : [
+		     {
+		        "file":"target/apacheds-wrapper.war",
+		        "context":"/apacheds-wrapper",
+		        "checkMe":"/apacheds-wrapper/ping"
+
+		        
+		     }
+		  ]
+    }
+}
+
